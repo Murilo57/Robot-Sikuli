@@ -7,6 +7,11 @@ Suite Teardown  Encerrar Sessão    #Para as Keywords da função Encerrar Sess�
 
 *** Test Cases ***
 Abrir o repositorio
-    
-    Log    Sem testes por hora
+    Entrar no Github
+    Log    Sem testes por hora    
     [Teardown]        Finaliza Teste
+
+*** Keywords ***
+Entrar no Github
+    Input Text       Pesquisa_Navegador.png       https://github.com/Murilo57
+    Press Special Key    ENTER
